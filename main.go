@@ -3,11 +3,14 @@ package main
 import (
 	"net/http"
 
+	"github.com/arjunstein/rest-api/db"
 	"github.com/arjunstein/rest-api/models"
 	"github.com/gin-gonic/gin"
 )
 
 func main()  {
+	// Initialize the database
+	db.InitDB()
 	server := gin.Default()
 
 	// Method endpoint
